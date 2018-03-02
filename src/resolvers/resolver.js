@@ -65,6 +65,27 @@ const resolvers = {
         console.log("err: ", err)
       })
     },
+    photosByAlbumId: (_, {albumId})=>{
+      return fetch(`http://jsonplaceholder.typicode.com/albums/${albumId}/photos`).then((response) => {
+        return response.json()
+      }).catch((err) => {
+        console.log("err: ", err)
+      })
+    },
+    albumsByUserId: (_, {userId})=>{
+      return fetch(`http://jsonplaceholder.typicode.com/users/${userId}/albums`).then((response) => {
+        return response.json()
+      }).catch((err) => {
+        console.log("err: ", err)
+      })
+    },
+    todosByUserId: (_, {userId})=>{
+      return fetch(`http://jsonplaceholder.typicode.com/users/${userId}/todos`).then((response) => {
+        return response.json()
+      }).catch((err) => {
+        console.log("err: ", err)
+      })
+    },
 
   }
 }

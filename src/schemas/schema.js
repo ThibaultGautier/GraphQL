@@ -10,6 +10,9 @@ type Query {
   postsById(id: ID): Post
   postsByUserId(userId: ID): [Post]!
   commentsByPostId(postId: ID): [Comment]!
+  photosByAlbumId(albumId: ID): [Photo]!
+  albumsByUserId(userId: ID): [Album]!
+  todosByUserId(userId: ID): [Todo]!
 }
 
 type User {
